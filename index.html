@@ -1817,6 +1817,18 @@
     closeSeriesMenus();
   }
 
+  function jumpSeriesFromMenuHeader(sectionId) {
+    activeMenuSizeKey = "";
+    document.querySelector("#sizeFilter").value = "";
+    document.querySelector("#seriesFilter").value = sectionId;
+    applyFilters();
+    setActiveTab(sectionId);
+    window.setTimeout(() => {
+      document.querySelector(`#${sectionId}`)?.scrollIntoView({ behavior: "smooth", block: "start" });
+      positionOpenSeriesMenu();
+    }, 40);
+  }
+
   function jumpAll() {
     activeMenuSizeKey = "";
     document.querySelector("#sizeFilter").value = "";
@@ -1942,6 +1954,11 @@
   });
 
   document.querySelectorAll(".series-menu").forEach((menu) => {
+    menu.querySelector("summary")?.addEventListener("click", () => {
+      const sectionId = menu.querySelector(".tab")?.dataset.section;
+      if (sectionId) jumpSeriesFromMenuHeader(sectionId);
+    });
+
     menu.addEventListener("toggle", () => {
       updateMenuOpenState();
       if (!menu.open) return;
