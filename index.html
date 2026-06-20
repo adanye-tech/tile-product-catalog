@@ -1468,6 +1468,16 @@
   let activeMenuSizeKey = "";
   let currentLang = "vi";
 
+  const ASSET_CDN_BASE = "https://zhenni550601966-tech.github.io/tile-product-catalog/";
+
+  function assetUrl(path) {
+    if (!path || !path.startsWith("assets/")) return path;
+    if (window.location.hostname === "falanbosstile.com") {
+      return `${ASSET_CDN_BASE}${path}`;
+    }
+    return path;
+  }
+
   const viText = {
     "Tile Product Catalog": "Danh mục sản phẩm gạch",
     "Filter by size": "Lọc theo kích thước",
@@ -1659,7 +1669,7 @@
     const index = allPhotos.findIndex((item) => item.id === photo.id);
     return `
       <button class="product-card" type="button" data-series="${photo.series}" data-size="${photo.sizeKey}" data-actual-sizes="${photo.actualSizes.join(" ")}" onclick="openLightbox(${index})">
-        <img src="${photo.thumb}" alt="${photo.code}" loading="lazy">
+        <img src="${assetUrl(photo.thumb)}" alt="${photo.code}" loading="lazy">
         <div class="card-info">
           <span class="code">${photo.code}</span>
           <span class="size">${translateText(photo.size)}</span>
@@ -2024,13 +2034,13 @@
   function renderLightboxImage() {
     const photo = allPhotos[activePhotoIndex];
     const current = activeGallery[activeGalleryIndex];
-    document.querySelector("#lb-img").src = current;
+    document.querySelector("#lb-img").src = assetUrl(current);
     document.querySelector("#lb-img").alt = photo.code;
     const positionText = currentLang === "vi" ? `${activeGalleryIndex + 1} / ${activeGallery.length}` : `${activeGalleryIndex + 1} of ${activeGallery.length}`;
     document.querySelector("#lb-caption").textContent = `${photo.code} / ${translateText(photo.size)} / ${translateText(photo.detailLabel)} / ${positionText}`;
     document.querySelector("#lb-thumbs").innerHTML = activeGallery.map((src, index) => `
       <button class="lb-thumb ${index === activeGalleryIndex ? "active" : ""}" type="button" onclick="selectLightboxImage(${index})">
-        <img src="${src}" alt="">
+        <img src="${assetUrl(src)}" alt="">
       </button>
     `).join("");
   }
