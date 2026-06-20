@@ -29,12 +29,10 @@
   html {
     scroll-behavior: smooth;
     max-width: 100%;
-    overflow-x: hidden;
   }
   body {
     margin: 0;
     max-width: 100%;
-    overflow-x: hidden;
     color: var(--ink);
     background: var(--bone);
     font-family: var(--sans);
@@ -589,6 +587,9 @@
     }
 
     .filter-bar {
+      position: sticky;
+      top: 0;
+      z-index: 70;
       display: grid;
       grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
       gap: 8px;
@@ -617,6 +618,9 @@
     .placeholder-grid { grid-template-columns: 1fr; }
     .section-header { align-items: flex-start; flex-direction: column; }
     .cat-tabs {
+      position: sticky;
+      top: var(--filter-height);
+      z-index: 60;
       justify-content: flex-start;
       overflow-x: auto;
       flex-wrap: nowrap;
