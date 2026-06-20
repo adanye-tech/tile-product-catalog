@@ -630,6 +630,9 @@
       overflow: visible;
       flex-wrap: wrap;
     }
+    .series-menu[open] {
+      flex-basis: 100%;
+    }
     .tab { white-space: nowrap; }
     main {
       padding: 18px 10px 34px;
@@ -659,10 +662,9 @@
       font-size: 10px;
     }
     .series-dropdown {
-      left: 12px;
-      right: 12px;
-      top: calc(var(--filter-height) + var(--tabs-height) + 8px);
-      width: auto;
+      position: static;
+      width: 100%;
+      margin-top: 8px;
       max-height: 54vh;
       overflow-y: auto;
     }
