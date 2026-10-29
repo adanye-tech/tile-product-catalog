@@ -1,0 +1,240 @@
+{
+  "version": "2026-10-29",
+  "purpose": "order-system product image assets",
+  "products": [
+    {
+      "product_code": "61201",
+      "size_label": "600x1200",
+      "thickness_mm": 10,
+      "pieces_per_box": 3,
+      "kg_per_box": 42,
+      "primary_image": "assets/order-system-products/H01/main.jpg",
+      "gallery": [
+        "assets/order-system-products/H01/main.jpg",
+        "assets/order-system-products/H01/multi-01.jpg",
+        "assets/order-system-products/H01/multi-02.jpg",
+        "assets/order-system-products/H01/multi-03.jpg",
+        "assets/order-system-products/H01/multi-04.jpg",
+        "assets/order-system-products/H01/effect-01.jpg",
+        "assets/order-system-products/H01/effect-02.jpg",
+        "assets/order-system-products/H01/effect-03.jpg"
+      ]
+    },
+    {
+      "product_code": "61202",
+      "size_label": "600x1200",
+      "thickness_mm": 10,
+      "pieces_per_box": 3,
+      "kg_per_box": 42,
+      "primary_image": "assets/order-system-products/H02/main.jpg",
+      "gallery": [
+        "assets/order-system-products/H02/main.jpg",
+        "assets/order-system-products/H02/multi-01.jpg",
+        "assets/order-system-products/H02/multi-02.jpg",
+        "assets/order-system-products/H02/multi-03.jpg",
+        "assets/order-system-products/H02/multi-04.jpg",
+        "assets/order-system-products/H02/effect-01.jpg",
+        "assets/order-system-products/H02/effect-02.jpg",
+        "assets/order-system-products/H02/effect-03.jpg"
+      ]
+    },
+    {
+      "product_code": "8802",
+      "size_label": "800x800",
+      "thickness_mm": null,
+      "pieces_per_box": 3,
+      "kg_per_box": 42,
+      "primary_image": "assets/order-system-products/H02/main.jpg",
+      "gallery": [
+        "assets/order-system-products/H02/main.jpg",
+        "assets/order-system-products/H02/multi-01.jpg",
+        "assets/order-system-products/H02/multi-02.jpg",
+        "assets/order-system-products/H02/multi-03.jpg",
+        "assets/order-system-products/H02/multi-04.jpg",
+        "assets/order-system-products/H02/effect-01.jpg",
+        "assets/order-system-products/H02/effect-02.jpg",
+        "assets/order-system-products/H02/effect-03.jpg"
+      ]
+    },
+    {
+      "product_code": "61203",
+      "size_label": "600x1200",
+      "thickness_mm": 10,
+      "pieces_per_box": 3,
+      "kg_per_box": 42,
+      "primary_image": "assets/order-system-products/H03/main.jpg",
+      "gallery": [
+        "assets/order-system-products/H03/main.jpg",
+        "assets/order-system-products/H03/multi-01.jpg",
+        "assets/order-system-products/H03/multi-02.jpg",
+        "assets/order-system-products/H03/multi-03.jpg",
+        "assets/order-system-products/H03/multi-04.jpg",
+        "assets/order-system-products/H03/effect-01.jpg",
+        "assets/order-system-products/H03/effect-02.jpg",
+        "assets/order-system-products/H03/effect-03.jpg"
+      ]
+    },
+    {
+      "product_code": "8803",
+      "size_label": "800x800",
+      "thickness_mm": null,
+      "pieces_per_box": 3,
+      "kg_per_box": 42,
+      "primary_image": "assets/order-system-products/H03/main.jpg",
+      "gallery": [
+        "assets/order-system-products/H03/main.jpg",
+        "assets/order-system-products/H03/multi-01.jpg",
+        "assets/order-system-products/H03/multi-02.jpg",
+        "assets/order-system-products/H03/multi-03.jpg",
+        "assets/order-system-products/H03/multi-04.jpg",
+        "assets/order-system-products/H03/effect-01.jpg",
+        "assets/order-system-products/H03/effect-02.jpg",
+        "assets/order-system-products/H03/effect-03.jpg"
+      ]
+    },
+    {
+      "product_code": "61205",
+      "size_label": "600x1200",
+      "thickness_mm": 10,
+      "pieces_per_box": 3,
+      "kg_per_box": 42,
+      "primary_image": "assets/order-system-products/H05/main.jpg",
+      "gallery": [
+        "assets/order-system-products/H05/main.jpg",
+        "assets/order-system-products/H05/multi-01.jpg",
+        "assets/order-system-products/H05/multi-02.jpg",
+        "assets/order-system-products/H05/multi-03.jpg",
+        "assets/order-system-products/H05/multi-04.jpg",
+        "assets/order-system-products/H05/effect-01.jpg",
+        "assets/order-system-products/H05/effect-02.jpg",
+        "assets/order-system-products/H05/effect-03.jpg"
+      ]
+    },
+    {
+      "product_code": "8805",
+      "size_label": "800x800",
+      "thickness_mm": null,
+      "pieces_per_box": 3,
+      "kg_per_box": 42,
+      "primary_image": "assets/order-system-products/H05/main.jpg",
+      "gallery": [
+        "assets/order-system-products/H05/main.jpg",
+        "assets/order-system-products/H05/multi-01.jpg",
+        "assets/order-system-products/H05/multi-02.jpg",
+        "assets/order-system-products/H05/multi-03.jpg",
+        "assets/order-system-products/H05/multi-04.jpg",
+        "assets/order-system-products/H05/effect-01.jpg",
+        "assets/order-system-products/H05/effect-02.jpg",
+        "assets/order-system-products/H05/effect-03.jpg"
+      ]
+    },
+    {
+      "product_code": "61206",
+      "size_label": "600x1200",
+      "thickness_mm": 10,
+      "pieces_per_box": 3,
+      "kg_per_box": 42,
+      "primary_image": "assets/order-system-products/H06/main.jpg",
+      "gallery": [
+        "assets/order-system-products/H06/main.jpg",
+        "assets/order-system-products/H06/multi-01.jpg",
+        "assets/order-system-products/H06/multi-02.jpg",
+        "assets/order-system-products/H06/multi-03.jpg",
+        "assets/order-system-products/H06/multi-04.jpg",
+        "assets/order-system-products/H06/effect-01.jpg",
+        "assets/order-system-products/H06/effect-02.jpg",
+        "assets/order-system-products/H06/effect-03.jpg"
+      ]
+    },
+    {
+      "product_code": "8806",
+      "size_label": "800x800",
+      "thickness_mm": null,
+      "pieces_per_box": 3,
+      "kg_per_box": 42,
+      "primary_image": "assets/order-system-products/H06/main.jpg",
+      "gallery": [
+        "assets/order-system-products/H06/main.jpg",
+        "assets/order-system-products/H06/multi-01.jpg",
+        "assets/order-system-products/H06/multi-02.jpg",
+        "assets/order-system-products/H06/multi-03.jpg",
+        "assets/order-system-products/H06/multi-04.jpg",
+        "assets/order-system-products/H06/effect-01.jpg",
+        "assets/order-system-products/H06/effect-02.jpg",
+        "assets/order-system-products/H06/effect-03.jpg"
+      ]
+    },
+    {
+      "product_code": "61207",
+      "size_label": "600x1200",
+      "thickness_mm": 10,
+      "pieces_per_box": 3,
+      "kg_per_box": 42,
+      "primary_image": "assets/order-system-products/H07/main.jpg",
+      "gallery": [
+        "assets/order-system-products/H07/main.jpg",
+        "assets/order-system-products/H07/multi-01.jpg",
+        "assets/order-system-products/H07/multi-02.jpg",
+        "assets/order-system-products/H07/multi-03.jpg",
+        "assets/order-system-products/H07/multi-04.jpg",
+        "assets/order-system-products/H07/effect-01.jpg",
+        "assets/order-system-products/H07/effect-02.jpg",
+        "assets/order-system-products/H07/effect-03.jpg"
+      ]
+    },
+    {
+      "product_code": "8807",
+      "size_label": "800x800",
+      "thickness_mm": null,
+      "pieces_per_box": 3,
+      "kg_per_box": 42,
+      "primary_image": "assets/order-system-products/H07/main.jpg",
+      "gallery": [
+        "assets/order-system-products/H07/main.jpg",
+        "assets/order-system-products/H07/multi-01.jpg",
+        "assets/order-system-products/H07/multi-02.jpg",
+        "assets/order-system-products/H07/multi-03.jpg",
+        "assets/order-system-products/H07/multi-04.jpg",
+        "assets/order-system-products/H07/effect-01.jpg",
+        "assets/order-system-products/H07/effect-02.jpg",
+        "assets/order-system-products/H07/effect-03.jpg"
+      ]
+    },
+    {
+      "product_code": "61208",
+      "size_label": "600x1200",
+      "thickness_mm": 10,
+      "pieces_per_box": 3,
+      "kg_per_box": 42,
+      "primary_image": "assets/order-system-products/H08/main.jpg",
+      "gallery": [
+        "assets/order-system-products/H08/main.jpg",
+        "assets/order-system-products/H08/multi-01.jpg",
+        "assets/order-system-products/H08/multi-02.jpg",
+        "assets/order-system-products/H08/multi-03.jpg",
+        "assets/order-system-products/H08/multi-04.jpg",
+        "assets/order-system-products/H08/effect-01.jpg",
+        "assets/order-system-products/H08/effect-02.jpg",
+        "assets/order-system-products/H08/effect-03.jpg"
+      ]
+    },
+    {
+      "product_code": "8808",
+      "size_label": "800x800",
+      "thickness_mm": null,
+      "pieces_per_box": 3,
+      "kg_per_box": 42,
+      "primary_image": "assets/order-system-products/H08/main.jpg",
+      "gallery": [
+        "assets/order-system-products/H08/main.jpg",
+        "assets/order-system-products/H08/multi-01.jpg",
+        "assets/order-system-products/H08/multi-02.jpg",
+        "assets/order-system-products/H08/multi-03.jpg",
+        "assets/order-system-products/H08/multi-04.jpg",
+        "assets/order-system-products/H08/effect-01.jpg",
+        "assets/order-system-products/H08/effect-02.jpg",
+        "assets/order-system-products/H08/effect-03.jpg"
+      ]
+    }
+  ]
+}
