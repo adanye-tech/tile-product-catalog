@@ -568,6 +568,33 @@
   .spec-block.collapsed .product-grid { display: none; }
   .spec-block.collapsed .spec-subgroup { display: none; }
 
+  .variant-jump-bar {
+    display: flex;
+    gap: 8px;
+    padding: 12px 16px 0;
+  }
+
+  .variant-jump {
+    flex: 1;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    background: var(--white);
+    color: var(--sage);
+    padding: 9px 12px;
+    font: inherit;
+    font-size: 13px;
+    font-weight: 750;
+    cursor: pointer;
+  }
+
+  .variant-jump:hover,
+  .variant-jump.active {
+    border-color: var(--clay);
+    background: var(--clay);
+    color: var(--white);
+  }
+
+  .spec-subgroup { scroll-margin-top: calc(var(--nav-toggle-height) + var(--filter-height) + var(--tabs-height) + var(--quick-height) + 18px); }
   .spec-subgroup.hidden { display: none; }
 
   .subspec-title {
@@ -946,6 +973,8 @@
       align-items: flex-start;
       padding: 12px;
     }
+    .variant-jump-bar { padding: 10px 12px 0; }
+    .variant-jump { min-height: 40px; }
     .spec-name {
       display: block;
       line-height: 1.25;
@@ -2331,6 +2360,11 @@
       return itemKey === groupKey;
     });
     const photos = allPhotos.filter((photo) => photo.groupKey === groupKey);
+    const variantJumpBar = group.series === "antiqueScreen" && relatedGroups.length > 1
+      ? `<div class="variant-jump-bar">${relatedGroups.map((item, index) => `
+          <button class="variant-jump ${index === 0 ? "active" : ""}" type="button" data-variant-for="${groupKey}" data-variant="${subgroupKey(item.subgroupLabel || item.label)}" onclick="jumpToVariant('${groupKey}', '${subgroupKey(item.subgroupLabel || item.label)}')">${translateText(item.subgroupLabel || item.label)}</button>
+        `).join("")}</div>`
+      : "";
     const gridContent = relatedGroups.length > 1
       ? relatedGroups.map((item) => {
         const subgroupPhotos = allPhotos.filter((photo) => photo.groupKey === groupKey && photo.sourceKey === item.prefix);
@@ -2348,7 +2382,7 @@
       : `<div class="product-grid">${photos.map(productCard).join("")}</div>`;
     const groupPackageInfo = packageInfo(group);
     return `
-      <section class="spec-block" data-series="${group.series}" data-size="${group.sizeKey}">
+      <section class="spec-block" data-series="${group.series}" data-size="${group.sizeKey}" data-group-key="${groupKey}">
         <div class="spec-header" onclick="toggleSpec(this)">
           <div>
             <span class="spec-name">${translateText(group.label)}</span>
@@ -2357,9 +2391,21 @@
           </div>
           <span class="toggle">▼</span>
         </div>
+        ${variantJumpBar}
         ${gridContent}
       </section>
     `;
+  }
+
+  function jumpToVariant(groupKey, subgroupId) {
+    const block = document.querySelector(`.spec-block[data-group-key="${groupKey}"]`);
+    const target = block?.querySelector(`.spec-subgroup[data-subgroup="${subgroupId}"]`);
+    if (!target) return;
+    block.classList.remove("collapsed");
+    block.querySelectorAll(".variant-jump").forEach((button) => {
+      button.classList.toggle("active", button.dataset.variant === subgroupId);
+    });
+    target.scrollIntoView({ behavior: "smooth", block: "start" });
   }
 
   function uniqueSpecGroups(series) {
