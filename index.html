@@ -1026,6 +1026,7 @@
     <option value="200x1200">200x1200mm</option>
     <option value="300x1200">300x1200mm</option>
     <option value="470x1200">470x1200mm</option>
+    <option value="600x600">600x600mm</option>
     <option value="600x1200">600x1200mm</option>
     <option value="720x900">720x900mm</option>
     <option value="750x750">750x750mm</option>
@@ -1039,6 +1040,7 @@
     <option value="">All series</option>
     <option value="wood">Wood Grain</option>
     <option value="stair">Stair Step Series</option>
+    <option value="antiqueScreen">Antique Screen-printing Craft</option>
     <option value="tile800">800x800 Series</option>
     <option value="tile1000">1000x1000 Series</option>
     <option value="tile1200">1200x1200 Series</option>
@@ -1087,6 +1089,13 @@
     <div class="series-dropdown">
       <button class="menu-item" type="button" data-size="" onclick="jumpSeries('tile800')">All 800x800</button>
       <button class="menu-item" type="button" data-size="800x800" onclick="jumpSpec('800x800', 'tile800')">800x800</button>
+    </div>
+  </details>
+  <details class="series-menu">
+    <summary class="tab" data-section="antiqueScreen">Antique Screen-printing Craft ▾</summary>
+    <div class="series-dropdown">
+      <button class="menu-item" type="button" data-size="" onclick="jumpSeries('antiqueScreen')">All Antique Screen-printing Craft</button>
+      <button class="menu-item" type="button" data-size="antique-screen-600" onclick="jumpSpec('antique-screen-600', 'antiqueScreen')">600x600</button>
     </div>
   </details>
   <details class="series-menu">
@@ -1162,6 +1171,13 @@
     return codes.map((code, index) => ({
       code,
       gallery: [`assets/${folder}/${filePrefix}-${String(index + 1).padStart(3, "0")}.jpg`]
+    }));
+  }
+
+  function warehouseImageItems(folder, filenames) {
+    return filenames.map((filename) => ({
+      code: filename.replace(/\.(jpg|png)$/i, "").replaceAll("_", " / "),
+      gallery: [`assets/${folder}/${filename}`]
     }));
   }
 
@@ -1562,6 +1578,129 @@
       ])
     },
     {
+      series: "antiqueScreen",
+      sizeKey: "antique-screen-600",
+      label: "Antique Screen-printing Craft / 600x600mm",
+      folder: "warehouse-600-round",
+      prefix: "ANTIQUE-600-ROUND",
+      mergeKey: "antique-screen-600-family",
+      subgroupLabel: "Rounded-corner",
+      items: warehouseImageItems("warehouse-600-round", [
+        "5D6101_5D6801.jpg",
+        "5D6103.jpg",
+        "5D6103_5D6803.jpg",
+        "5D6105.jpg",
+        "5D6106.jpg",
+        "5D6106_5D6806.jpg",
+        "5D6107.jpg",
+        "5D6108.jpg",
+        "5D6109.jpg",
+        "5D6109_5D6809.jpg",
+        "5D6111.jpg",
+        "5D6113.jpg",
+        "5D6115.jpg",
+        "5D6116.jpg",
+        "5D6116_5D6816.jpg",
+        "66XY008.jpg",
+        "66XY011.jpg",
+        "68003_67003.jpg",
+        "68XY008.jpg",
+        "G601.jpg",
+        "G602.jpg",
+        "G603.jpg",
+        "KA6800.jpg",
+        "KA68002.jpg",
+        "KA68004.jpg",
+        "KA68006.jpg",
+        "KA68008.jpg",
+        "KA68009.jpg",
+        "KA68009_KA67009.jpg",
+        "KA6801.jpg",
+        "KA68010.jpg",
+        "KA68010.png",
+        "KA68011.jpg",
+        "KA6802_KA67002.jpg",
+        "KA6803.jpg",
+        "KA6804_KA67004.jpg",
+        "KA6804_KA6904.jpg",
+        "KA6807_KA67007.jpg",
+        "SD6101.png",
+        "SD6104.png",
+        "S_MS600J.jpg"
+      ])
+    },
+    {
+      series: "antiqueScreen",
+      sizeKey: "antique-screen-600",
+      label: "Antique Screen-printing Craft / 600x600mm",
+      folder: "warehouse-600-square",
+      prefix: "ANTIQUE-600-SQUARE",
+      mergeKey: "antique-screen-600-family",
+      subgroupLabel: "Square-corner",
+      items: warehouseImageItems("warehouse-600-square", [
+        "5D6101_5D6801.jpg",
+        "5D6103_5D6803.jpg",
+        "5D6106_5D6806.jpg",
+        "5D6109_5D6809.jpg",
+        "5D6116_5D6816.jpg",
+        "5D6801.jpg",
+        "5D6803.jpg",
+        "5D6806.jpg",
+        "5D6809.jpg",
+        "5D6816.jpg",
+        "5D6905.jpg",
+        "5D6916.jpg",
+        "67003.jpg",
+        "68003_67003.jpg",
+        "68XY005.jpg",
+        "68XY006.jpg",
+        "K601.jpg",
+        "K602.jpg",
+        "K603.jpg",
+        "K604.jpg",
+        "K606.jpg",
+        "K608.jpg",
+        "K609.jpg",
+        "K610.jpg",
+        "K621.jpg",
+        "K622.jpg",
+        "K630.jpg",
+        "K631.jpg",
+        "K632.jpg",
+        "KA67002.jpg",
+        "KA67004.jpg",
+        "KA67007.jpg",
+        "KA67009.jpg",
+        "KA67010.jpg",
+        "KA68002_KA67002.jpg",
+        "KA68004_KA67004.jpg",
+        "KA68004_KA69004.jpg",
+        "KA68007_KA67007.jpg",
+        "KA68009_KA67009.jpg",
+        "KA69004.jpg",
+        "S6602.jpg",
+        "S6603.jpg",
+        "S6605.jpg",
+        "S6606.jpg",
+        "S6608.jpg",
+        "S6609.jpg",
+        "S6610.jpg",
+        "S6621.jpg",
+        "S6622.jpg",
+        "S6630.jpg",
+        "S6631.jpg",
+        "S6653.jpg",
+        "YH802.jpg",
+        "YH803.jpg",
+        "YH804.jpg",
+        "YS6931.jpg",
+        "YS6932.jpg",
+        "YS6933.jpg",
+        "YS6935.jpg",
+        "YS6936.jpg"
+      ])
+    },
+    {
       series: "tile1000",
       sizeKey: "1000-glossy",
       label: "1000x1000 Glossy Surface",
@@ -1885,6 +2024,11 @@
     "All Wood Grain": "Tất cả gạch vân gỗ",
     "Stair Step Series": "Dòng gạch bậc thang",
     "All Stair Step": "Tất cả gạch bậc thang",
+    "Antique Screen-printing Craft": "Gạch men cổ in lưới",
+    "All Antique Screen-printing Craft": "Tất cả gạch men cổ in lưới",
+    "Antique Screen-printing Craft / 600x600mm": "Gạch men cổ in lưới / 600x600mm",
+    "Rounded-corner": "Góc bo tròn",
+    "Square-corner": "Góc vuông",
     "Outdoor Stair Series": "Dòng bậc thang ngoài trời",
     "800x800 Series": "Dòng 800x800",
     "All 800x800": "Tất cả 800x800",
@@ -2087,6 +2231,7 @@
       "200x1200",
       "300x1200",
       "470x1200",
+      "600x600",
       "600x1200",
       "720x900",
       "750x750",
@@ -2115,6 +2260,7 @@
       "stair-470x1200-12": "Thickness: 12mm / 43.5kg per box / 3 pcs per box / pallet: 10 pallets x 56 boxes + 3 pallets x 25 boxes / loose load: 640 boxes",
       "stair-470x1200-15": "Thickness: 15mm / 37kg per box / 2 pcs per box / pallet: 10 pallets x 56 boxes + 6 pallets x 27 boxes + 1 pallet x 23 boxes / loose load: 755 boxes",
       "800x800": "41kg per box / 3 pcs per box",
+      "antique-screen-600": "4 pcs per box / 31kg per box",
       "1000-glossy": "Thickness: 9.8+/-0.2mm / 45kg per box / 2 pcs per box / 42 boxes per pallet",
       "1000-rustic": "Thickness: 9.8+/-0.2mm / 45kg per box / 2 pcs per box / 42 boxes per pallet",
       "1200x1200": "65kg per box / 2 pcs per box / 39 boxes per pallet",
