@@ -2425,6 +2425,13 @@
         </div>
         ${uniqueSpecGroups("tile800").map(specBlock).join("")}
       </section>
+      <section id="antiqueScreen" class="series-section" data-series="antiqueScreen">
+        <div class="section-header">
+          <h2>${t("Antique Screen-printing Craft")}</h2>
+          <span>${countText(allPhotos.filter((item) => item.series === "antiqueScreen").length, "images")} / 600x600</span>
+        </div>
+        ${uniqueSpecGroups("antiqueScreen").map(specBlock).join("")}
+      </section>
       <section id="tile1000" class="series-section" data-series="tile1000">
         <div class="section-header">
           <h2>${t("1000x1000 Series")}</h2>
